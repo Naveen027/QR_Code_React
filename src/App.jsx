@@ -6,18 +6,29 @@ const menu = [
   {
     category: "Cakes",
     items: [
-      { id: 1, name: "Lounge Elegance Espresso", price: 3.5 },
-      { id: 2, name: "Velvet Mocha Delight", price: 4.25 },
-      { id: 3, name: "Caramel Macchiato Symphony", price: 4.0 }
+      { id: 1, name: "Lounge Elegance Espresso", price: 35 },
+      { id: 2, name: "Velvet Mocha Delight", price: 45 },
+      { id: 3, name: "Caramel Macchiato Symphony", price: 40 }
     ]
   },
   {
     category: "Pastries",
     items: [
-      { id: 4, name: "Butter Croissant", price: 2.0 },
-      { id: 5, name: "Chocolate Danish", price: 3.0 }
+      { id: 4, name: "Butter Croissant", price: 20 },
+      { id: 5, name: "Chocolate Danish", price: 300 }
+    ]
+  },
+  {
+    category: "Mojitos",
+    items: [
+      { id: 1, name: "Classic Mint Mojito", price: 120 },
+      { id: 2, name: "Strawberry Mojito", price: 150 },
+      { id: 3, name: "Lemon Mojito", price: 130 },
+      { id: 4, name: "Blue Curacao Mojito", price: 160 },
+      { id: 5, name: "Watermelon Mojito", price: 140 }
     ]
   }
+
 ];
 
 function App() {
@@ -70,6 +81,13 @@ function App() {
     }
   };
 
+  // ✅ Automatically downloads image once summary is shown
+  useEffect(() => {
+    if (orderSummary) {
+      setTimeout(downloadImage, 300);
+    }
+  }, [orderSummary]);
+
   const handleSubmit = async () => {
     const { name, number } = form;
     if (!name || !number) {
@@ -108,7 +126,7 @@ function App() {
         setForm({ name: "", number: "" });
         setShowForm(false);
 
-        setTimeout(downloadImage, 500);
+        // setTimeout(downloadImage, 500);
       } else {
         alert("❌ " + result.message);
       }

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url("https://images.pexels.com/photos/30208054/pexels-photo-30208054.jpeg?_gl=1*2ei599*_ga*MTI1MjI0MjQzNy4xNzUxOTg3NzAx*_ga_8JE65Q40S6*czE3NTI2NzQxMjIkbzIkZzEkdDE3NTI2NzQyMTIkajQ3JGwwJGgw");
+  background-image: url("https://c.pxhere.com/photos/12/1f/coffee_flat_white_latte_cup_of_coffee_coffee_table-1410426.jpg!d");
   background-size: cover;
   /* Ensures full coverage */
   background-position: center;
@@ -43,7 +43,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   margin-bottom: 14px;
 }
 
@@ -86,7 +86,7 @@ body {
 .cart-btn {
   width: 100%;
   background-color: #1f2937;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 14px;
   font-size: 15px;
   font-weight: bold;
